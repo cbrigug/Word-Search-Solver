@@ -1,0 +1,23 @@
+#word {
+    height:50px;
+    font-size:20pt;
+    width:100%;
+}
+
+.uploadButton {
+    z-index: 12;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50% !important
+}
+
+.editList {
+    white-space: pre;
+    padding-left: 5px;;
+}
+
+.check {
+    visibility: hidden;
+}

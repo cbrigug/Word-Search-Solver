@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Choose
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button (click)="loadPhoto()" expand="full" size="large">Load Photo
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
+  <img [src]="photo">
+  <ion-button (click)="onSubmit()" expand="full" color="secondary">Choose!</ion-button>
+</ion-content>

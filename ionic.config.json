@@ -1,0 +1,7 @@
+{
+  "name": "Word Search Solver",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

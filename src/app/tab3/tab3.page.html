@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Solve
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="wordSearch"></div>
+  <img [src]="photo">
+  <ion-button (click)="looksGood()" expand="full" size="large" class="looksGood2">Looks Good!
+    <ion-icon name="checkbox-outline"></ion-icon>
+  </ion-button>
+  <ion-button (click)="solvePuzzleLoop()" expand="full" size="large" class="solveButton" style="display:none;">Solve!</ion-button>
+  
+</ion-content>
