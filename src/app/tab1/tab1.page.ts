@@ -40,7 +40,7 @@ export class Tab1Page {
 
     //executs OCR to increase execution time
     //"./assets/Images/wordsearchtest.jpg"
-    await this.imageOcr.imageOcr("./assets/Images/wordsearchtest.jpg");
+    await this.imageOcr.imageOcr(this.photo);
 
     //runs tab3's ngOnInit() method.
     this.tab3.ngOnInit();
