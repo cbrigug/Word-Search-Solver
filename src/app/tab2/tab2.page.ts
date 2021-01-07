@@ -53,7 +53,7 @@ export class Tab2Page {
 
     const image = await Plugins.Camera.getPhoto({
       quality: 100,
-      allowEditing: true,
+      allowEditing: false,
       resultType: CameraResultType.DataUrl,
       source: CameraSource.Prompt
     });

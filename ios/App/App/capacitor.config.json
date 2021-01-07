@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "test",
+  "appName": "Word Search Solver",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

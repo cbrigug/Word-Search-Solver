@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import * as $ from 'jquery';
 import { Storage } from '@ionic/storage';
 import { SafeResourceUrl } from '@angular/platform-browser';
@@ -13,21 +13,12 @@ import { WordListService } from '../services/word-list.service';
 export class Tab3Page {
   photo: SafeResourceUrl;
   lineLength: number;
+  noSpacesLength: number;
   fullPuzzleString: string;
   fullPuzzleArrayAnswer;
 
   constructor(public storage: Storage, private imageOcr: ImageOcrService, private wordList: WordListService) {
   }
-
-  // resolve(route:ActivatedRouteSnapshot) {
-  //   let words = route.paramMap.get('name');
-  //   console.log(words);
-    //console.log("tab3!: " + this.Tab2.onSubmit());
-  //}
-  // ngOnInit() {
-  //   let dataRecv = this.activeRoute.snapshot.paramMap.get('name');
-  //   console.log(dataRecv);
-  // }
 
   ngOnInit() {
     $(".wordSearch").empty();
@@ -36,18 +27,20 @@ export class Tab3Page {
     let testString;
 
     //alert(result.text);
-    //console.log(result.text);
     let wordArray: Array<string> = [];
     testString = this.imageOcr.wordSearch.toUpperCase();
 
     //looks for misleading 0's and converts them to what they are supposed to be (an O)
     testString = testString.split("0").join("O");
 
+    testString = testString.split("|").join("I");
+
+    testString = testString.split("2").join("Z");
+
     //separates by lines
     wordArray = testString.split("\n");
     
     for (let i = 0; i < wordArray.length; i++) {
-      //console.log(wordArray[i]);
       if (wordArray[i] != "") {
         $(".wordSearch").append('<ion-input spellcheck="false" value="' + wordArray[i] + '"></ion-input>');
         //numLines++;
@@ -68,6 +61,10 @@ export class Tab3Page {
     firstLine = $("ion-input").val();
     let lineLength = firstLine.length;
     this.lineLength = firstLine.length;
+
+    let firstLineNoSpaces = firstLine.replace(/\s/g, '');
+    this.noSpacesLength = firstLineNoSpaces.length;
+
     
     $("ion-input").each(function() {
       fullPuzzleString += ($(this).val());
@@ -95,7 +92,6 @@ export class Tab3Page {
   solvePuzzleLoop() {
     //retrieves words array inputted from the 'search' tab
     let wordList = this.wordList.wordList;
-    console.log(wordList);
 
     if (wordList != null) {
       for (let i = 0; i < wordList.length; i++) {
@@ -115,7 +111,7 @@ export class Tab3Page {
     let fullPuzzleArray = [];
     let testWordArray = [];
 
-    length = this.lineLength;
+    length = this.noSpacesLength;
 
     //simplifies
     fullPuzzleArray = this.stringSimplify(fullPuzzleString);
@@ -285,11 +281,11 @@ export class Tab3Page {
 
 
   highlightWords() {
-    let length = this.lineLength;
+    let length = this.noSpacesLength;
     let answersString = this.fullPuzzleArrayAnswer;
 
-    $(".wordSearch").empty();
     let whereAt: number = 1;
+    $(".wordSearch").empty();
     
     $(".wordSearch").append('<ion-row class="ion-nowrap" id="1">')
     for (let i = 0 ; i < answersString.length; i++) {
