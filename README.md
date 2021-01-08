@@ -1,4 +1,4 @@
-"# Word-Search-Solver" 
+# Word-Search-Solver" 
 
 ## Launching Application
 - Clone the directory to local machine
