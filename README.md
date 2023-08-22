@@ -9,7 +9,7 @@
 4. Solve!
 
 ![image](https://github.com/cbrigug/Word-Search-Solver/assets/50587044/3a6ac9ab-d208-4cc4-9c8e-812e3dfe0f9c)
-![image](https://github.com/cbrigug/Word-Search-Solver/assets/50587044/ff65f9ec-0e04-4b67-a4e3-2dc8fd78f7ce)
+![image](https://github.com/cbrigug/Word-Search-Solver/assets/50587044/94e20ec1-ad2e-4f8f-aa59-980e025a1dd7)
 ![image](https://github.com/cbrigug/Word-Search-Solver/assets/50587044/766d97d3-c09e-429a-8238-dcb088f61dc7)
 ![image](https://github.com/cbrigug/Word-Search-Solver/assets/50587044/328232bf-e0a5-4c1f-ada0-5fca3e73b2a8)
 
